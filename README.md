@@ -42,18 +42,18 @@ The project demonstrates the complete testing lifecycle: identifying defects, cr
 
 ```text
 ai-test-project/
-├── app.py                  # Flask application and API
-├── README.md               # Project documentation
-├── requirements.txt        # Python dependencies
-├── report.html             # Generated HTML test report
+├── app.py
+├── README.md
+├── requirements.txt
+├── report.html
 ├── templates/
-│   └── index.html          # Chatbot web interface
+│   └── index.html
 ├── tests/
-│   └── test_api.py         # Automated API test suite
+│   └── test_api.py
 ├── .github/
 │   └── workflows/
-│       └── tests.yml       # GitHub Actions CI workflow
-└── .gitignore              # Git ignoredles
+│       └── tests.yml
+└── .gitignore
 ```
 
 ## Test Scenarios
