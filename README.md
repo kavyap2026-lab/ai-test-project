@@ -118,6 +118,26 @@ The same automated test suite is also executed through **GitHub Actions** whenev
 **Current CI Status:** Passing ✅
 An HTML test report is generated using pytest-html.
 
+## Project Screenshots
+
+### Chatbot Interface
+
+The Flask-based customer support chatbot responding to a business-hours query.
+
+![Chatbot Interface](screenshots/chatbot-ui.png)
+
+### Automated Test Results
+
+Pytest execution showing all 9 automated test cases passing successfully.
+
+![Pytest Results](screenshots/pytest-results.png)
+
+### Continuous Integration
+
+GitHub Actions automatically executing the QA automation test suite on the `main` branch.
+
+![GitHub Actions Success](screenshots/github-actions-success.png)
+
 ## How to Run the Project
 ### 1. Clone the Repository
 
