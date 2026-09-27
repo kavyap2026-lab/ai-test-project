@@ -1,52 +1,62 @@
 # AI Test Automation Project
 
-A beginner-friendly QA automation project for testing an AI-style customer support chatbot built with Flask.
+A QA automation portfolio project demonstrating API testing, negative testing, AI safety validation, regression testing, HTML reporting, and Continuous Integration for a Flask-based customer support chatbot.
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20Application-black)
+![Pytest](https://img.shields.io/badge/Testing-Pytest-green)
+![CI](https://github.com/kavyap2026-lab/ai-test-project/actions/workflows/tests.yml/badge.svg)
 
 ## Project Overview
 
-This project demonstrates how automated testing can be used to identify and prevent common problems in AI-powered applications.
+This project simulates a real-world QA automation workflow for a Flask-based customer support chatbot. The application provides responses through both a web interface and REST API, while an automated Pytest suite validates functional behavior, input validation, error handling, and AI-related safety scenarios.
 
-The chatbot provides answers to customer questions through a simple web interface and REST API.
+The project demonstrates the complete testing lifecycle: identifying defects, creating automated test cases, fixing application behavior, performing regression testing, generating test reports, and automatically executing tests through GitHub Actions.
 
-The project focuses on:
+### Key Testing Areas
 
-- Functional API testing
-- Negative testing
-- Input validation
+- REST API functional testing
+- Positive and negative test scenarios
+- HTTP status code validation
+- Input and request validation
 - AI hallucination prevention
-- Prompt injection testing
+- Prompt injection and credential-disclosure testing
 - Regression testing
-- HTML test reporting
+- Automated HTML test reporting
+- Continuous Integration with GitHub Actions
 
 ## Technology Stack
 
-- Python
-- Flask
-- Pytest
-- pytest-html
-- REST API
-- HTML/CSS/JavaScript
-- Git and GitHub
-- GitHub Actions
+| Category | Technology |
+| --- | --- |
+| Programming Language | Python |
+| Web Framework | Flask |
+| Test Framework | Pytest |
+| Test Reporting | pytest-html |
+| API Testing | REST API |
+| Frontend | HTML, CSS, JavaScript |
+| Version Control | Git & GitHub |
+| Continuous Integration | GitHub Actions |
 
 ## Project Structure
 
 ai-test-project/
-├── app.py
-├── README.md
-├── requirements.txt
-├── report.html
+├── app.py                  # Flask application and API
+├── README.md               # Project documentation
+├── requirements.txt        # Python dependencies
+├── report.html             # Generated HTML test report
 ├── templates/
-│   └── index.html
+│   └── index.html          # Chatbot web interface
 ├── tests/
-│   └── test_api.py
+│   └── test_api.py         # Automated API test suite
 ├── .github/
 │   └── workflows/
-└── .gitignore
+│       └── tests.yml       # GitHub Actions CI workflow
+└── .gitignore              # Git ignored files
 
 ## Test Scenarios
 
-The automated test suite currently contains 9 tests.
+The automated test suite contains **9 test cases** covering functional behavior, request validation, negative scenarios, and AI safety risks.
 
 ### Functional Tests
 
@@ -90,71 +100,110 @@ The application was then updated to refuse requests for confidential information
 
 ## Test Results
 
-The final regression test run produced:
+The final regression test suite currently passes all automated test cases:
 
-9 passed
-0 failed
+| Result | Count |
+| --- | ---: |
+| Total Tests | 9 |
+| Passed | 9 |
+| Failed | 0 |
+| Pass Rate | 100% |
 
+Test execution is performed with **Pytest**, and a self-contained HTML report is generated using **pytest-html**.
+
+The same automated test suite is also executed through **GitHub Actions** whenever changes are pushed to the `main` branch or submitted through a pull request.
+
+**Current CI Status:** Passing ✅
 An HTML test report is generated using pytest-html.
 
 ## How to Run the Project
+### 1. Clone the Repository
 
-### 1. Activate the virtual environment
+git clone https://github.com/kavyap2026-lab/ai-test-project.git
+
+### 2. Navigate to the Project
+
+cd ai-test-project
+
+### 3. Create a Virtual Environment
+
+python3 -m venv venv
+
+### 4. Activate the Virtual Environment
+
+macOS/Linux:
 
 source venv/bin/activate
 
-### 2. Install dependencies
+Windows:
+
+venv\Scripts\activate
+
+### 5. Install Dependencies
 
 pip install -r requirements.txt
 
-### 3. Start the Flask application
+### 6. Start the Flask Application
 
 python app.py
 
-The application runs locally at:
+The application will be available at:
 
 http://127.0.0.1:5000
 
-### 4. Run the automated tests
+### 7. Run the Automated Tests
 
-Open another Terminal window and activate the virtual environment.
-
-Then run:
+Open another terminal window, navigate to the project directory, activate the virtual environment, and run:
 
 PYTHONPATH=. pytest tests/test_api.py -v
 
-### 5. Generate the HTML test report
+### 8. Generate the HTML Test Report
 
 PYTHONPATH=. pytest tests/test_api.py -v --html=report.html --self-contained-html
 
+Open `report.html` in a browser to view the detailed test execution report.
+
 ## QA Workflow
 
-Application Development
-        ↓
-Test Case Creation
-        ↓
-Test Execution
-        ↓
-Defect Detection
-        ↓
-Defect Fix
-        ↓
-Regression Testing
-        ↓
-9/9 Tests Passed
+This project follows an end-to-end QA automation workflow:
+
+        Requirement Analysis
+                ↓
+        Test Scenario Design
+                ↓
+      Automated Test Development
+                ↓
+          Test Execution
+                ↓
+         Defect Detection
+                ↓
+            Defect Fix
+                ↓
+        Regression Testing
+                ↓
+          CI Validation
+                ↓
+       9/9 Tests Passed ✅
+
+The automated test suite is validated both locally and through GitHub Actions.
 
 ## Future Improvements
 
-Planned improvements include:
+Planned enhancements for the project:
 
-- UI automation using Selenium
-- Additional negative test cases
-- API response schema validation
-- GitHub Actions CI/CD
-- Cross-browser testing
-- Additional AI safety test cases
-- Test coverage reporting
+- Add Selenium-based UI automation
+- Implement Page Object Model (POM)
+- Add cross-browser testing
+- Expand negative and edge-case coverage
+- Add API response schema validation
+- Add screenshots for UI test failures
+- Add test coverage reporting
+- Expand AI safety and prompt-injection test scenarios
 
 ## Author
 
-Kavya P
+**Kavya P**
+
+QA Automation | API Testing | Python | Pytest | GitHub Actions
+
+GitHub: https://github.com/kavyap2026-lab
