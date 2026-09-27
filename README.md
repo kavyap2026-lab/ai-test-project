@@ -40,6 +40,7 @@ The project demonstrates the complete testing lifecycle: identifying defects, cr
 
 ## Project Structure
 
+```text
 ai-test-project/
 ├── app.py                  # Flask application and API
 ├── README.md               # Project documentation
@@ -52,7 +53,8 @@ ai-test-project/
 ├── .github/
 │   └── workflows/
 │       └── tests.yml       # GitHub Actions CI workflow
-└── .gitignore              # Git ignored files
+└── .gitignore              # Git ignoredles
+```
 
 ## Test Scenarios
 
